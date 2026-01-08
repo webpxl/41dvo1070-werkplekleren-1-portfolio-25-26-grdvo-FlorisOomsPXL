@@ -1,0 +1,175 @@
+/* Kleurenpalet: Kaki #4B5332 | Beige #F2EBE3 | Gebroken wit #F9F8F4 */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F9F8F4;
+    color: #2C2F23;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* De centrale lijn van de site */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 40px;
+    width: 100%;
+    position: relative;
+}
+
+/* Navigatie */
+nav {
+    padding: 30px 0;
+    background-color: #F9F8F4;
+}
+
+.nav-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #2C2F23;
+    margin-left: 30px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+/* Hero Sectie met de correcte uitlijning */
+.hero-split {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 85vh;
+    background-color: #F2EBE3;
+    overflow: hidden;
+}
+
+.hero-text-block {
+    max-width: 50%; /* Zorgt dat tekst niet over de foto loopt */
+    z-index: 2;
+}
+
+.hero-image-side {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+}
+
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+h1 {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    line-height: 1;
+    margin-bottom: 15px;
+    letter-spacing: -2px;
+}
+
+.tagline {
+    color: #4B5332;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.hero-subtext {
+    font-size: 1.1rem;
+    opacity: 0.8;
+}
+
+/* Algemene Sectie Styling */
+.section-padding {
+    padding: 100px 0;
+}
+
+.projects-bg {
+    background-color: #F2EBE3;
+}
+
+.section-box {
+    border-left: 3px solid #4B5332;
+    padding-left: 40px;
+}
+
+.label {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    color: #4B5332;
+    margin-bottom: 30px;
+    display: block;
+}
+
+.main-para {
+    max-width: 800px;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+/* Projecten Grid */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background-color: #F9F8F4;
+    padding: 40px;
+    border-radius: 2px;
+}
+
+.category {
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: #4B5332;
+    text-transform: uppercase;
+}
+
+.special-banner {
+    background-color: #4B5332;
+}
+
+/* Footer */
+footer {
+    padding: 60px 0;
+    font-size: 0.8rem;
+    opacity: 0.6;
+}
+
+/* Responsive voor mobiel */
+@media (max-width: 900px) {
+    .hero-split {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .hero-image-side {
+        position: relative;
+        width: 100%;
+        height: 400px;
+    }
+    .hero-text-block {
+        max-width: 100%;
+        padding: 50px 0;
+    }
+}
