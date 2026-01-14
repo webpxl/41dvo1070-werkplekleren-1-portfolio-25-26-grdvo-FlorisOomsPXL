@@ -25,3 +25,4 @@ Mappenstructuur:
 /style.css: Centraal stylesheet voor de hele website.
 /assets: Map met alle gebruikte visuele assets en de reflectie-PDF.
 /portfolio/portfolio.html: De aparte reflectiepagina (Situering en Eindreflectie).
+/privacy.txt: Mijn privacy-richtlijnen.
