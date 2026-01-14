@@ -173,3 +173,69 @@ footer {
         padding: 50px 0;
     }
 }
+
+/* De breedte van de foto iets verkleinen (naar 40%) */
+.hero-image-side {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40%; /* Was 45 of 50%, nu iets kleiner */
+    height: 100%;
+}
+
+/* Zorg dat de navigatie er professioneel uitziet */
+.nav-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #2C2F23;
+    margin-left: 30px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #4B5332; /* Verandert naar Kaki bij eroverheen gaan */
+}
+
+/* Navigatie links styling */
+.nav-links a {
+    text-decoration: none;
+    color: #2C2F23;
+    margin-left: 30px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    position: relative; /* Nodig om het lijntje te positioneren */
+    padding-bottom: 5px; /* Ruimte tussen tekst en lijntje */
+    transition: color 0.3s ease;
+}
+
+/* Het lijntje zelf (onzichtbaar bij start) */
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0; /* Begint op 0 breedte */
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #4B5332; /* Jouw kaki kleur */
+    transition: width 0.3s ease; /* Zorgt voor de animatie */
+}
+
+/* Wat er gebeurt bij hover */
+.nav-links a:hover {
+    color: #4B5332; /* Tekst wordt ook kaki */
+}
+
+.nav-links a:hover::after {
+    width: 100%; /* Lijntje groeit naar volledige breedte */
+}
